@@ -1,0 +1,76 @@
+.Modal-window{
+    width: 330px;
+    height: 450px;
+    border-radius: 5px;
+    background-color: #353641;
+    box-sizing: border-box;
+    border: 0.5px solid silver;
+    position: absolute;
+    top: 110px;
+    left: 50%; 
+    flex-direction: column;
+    transform: translateX(-50%) scale(0.5);
+    animation: winAnimation 0.5s forwards ease;
+
+    .Modal-Title{
+        width: 330px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.39);
+        color: white;
+        border-radius: 5px;
+    
+    }
+
+    .Download-Img{
+        width: 280px;
+        height: 180px;
+        margin-top: 20px;
+        background-color:  #545662;
+        // background-color:  #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .Modal-Body{
+      margin-left: 25px;
+    }
+    .Input-Title{
+        color: white;
+        margin-top: "20px"
+    }
+    .Input-Supplier-Name{
+        background-color:  #545662;
+        width: 280px;
+        border-radius: 5px;
+        border:none;
+        margin-top: 5px;
+        color:white;
+    }
+    .Input-Select{
+        width: 280px;
+        background-color: #545662;
+        border: none;
+        color: white;
+        margin-top: 5px;
+    }
+    .Modal-Footer{
+        border: none;
+        width: 280px;
+        padding: 0;
+    }
+
+    @keyframes winAnimation {
+        100%{
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+        }
+}
+
+
+
+

@@ -1,0 +1,30 @@
+.Group-List-Nav{
+    position: relative;
+    nav{
+       width: 130px;
+
+    }
+    ul{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        color: white;
+        list-style: none;
+        font-size: 13px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+}
+
+.Group-List-Nav::before{
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    width: 130px;
+    left: 0px;
+    top: 30px;
+    background-color: black;
+}

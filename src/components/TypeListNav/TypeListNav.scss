@@ -1,0 +1,27 @@
+.Type-List-Nav-Block {
+    position: relative;
+  nav {
+    width: 450px;
+  }
+  ul {
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    color: white;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+.Type-List-Nav-Block::after{
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    width: 480px;
+    left: 0px;
+    top: 30px;
+    background-color: black;
+}

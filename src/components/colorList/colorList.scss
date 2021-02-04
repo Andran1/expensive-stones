@@ -1,0 +1,19 @@
+.Color-List-Block{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    .Color-List-Img{
+        width: 50px;
+        height: 50px;
+        border: 1px solid #545662;
+        border-radius: 10px;
+    }
+    .Color-List-Name{
+        
+        text-align: center;
+        color:silver;
+        font-size: 12px;
+        font-weight: 300;
+        
+    }
+}

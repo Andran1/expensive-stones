@@ -1,0 +1,35 @@
+
+.Price-List-Item{
+
+    background-color: #545662;
+    border-radius: 3px;
+    height: 130px;
+    margin: 20px 0 25px 0;
+   
+
+    .Price-List{
+        width: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        border-bottom: black 1px solid;
+        padding: 4px;
+     
+    }
+    .Price-List-img{
+        width: 45px;
+        height: 25px;
+    }
+    .Price-List-Img-Silver{ 
+        width: 45px;
+        height: 45px;
+    }
+    .Price-List-Img-Block{
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
+

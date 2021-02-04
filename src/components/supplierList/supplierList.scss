@@ -1,0 +1,29 @@
+.Supplier-Block{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Supplier-List{
+    margin-top: 15px;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #545662;
+}
+
+.Supplier-footer{
+    width: 120px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    width: 120px;
+}
+.Supplier-image{
+    width: 120px;
+}
+.Supplier-p{
+    color: #ffffff;
+}

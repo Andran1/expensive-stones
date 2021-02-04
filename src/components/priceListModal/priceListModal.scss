@@ -1,0 +1,47 @@
+.Modal-Price-List{
+    width: 750px;
+    height: 450px;
+    border-radius: 5px;
+    background-color: #353641;
+    box-sizing: border-box;
+    border: 0.5px solid silver;
+    position: absolute;
+    top: 110px;
+    left: 50%; 
+    flex-direction: column;
+    transform: translateX(-50%) scale(0.5);
+    animation: addAnimation 0.5s forwards ease;
+
+    .Modal-Title{
+        width: 750px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.39);
+        color: white;
+        border-radius: 5px;
+    
+    }
+
+    .Price-List-Modal-Block{
+        height: 390px;
+        margin: 10px;
+        background-color:  #545662;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .Price-List-Modal-Block-Item{
+        margin-left: 20px;
+    }
+  
+
+    @keyframes addAnimation {
+        100%{
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+        }
+}
+
+
+
