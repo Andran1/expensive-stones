@@ -1,5 +1,5 @@
 .Type-List-Nav-Block {
-    position: relative;
+  position: relative;
   nav {
     width: 450px;
   }
@@ -16,12 +16,24 @@
     cursor: pointer;
   }
 }
-.Type-List-Nav-Block::after{
-    content: "";
-    position: absolute;
-    height: 1.5px;
-    width: 480px;
-    left: 0px;
-    top: 30px;
-    background-color: black;
+.Type-List-Nav-Block::after {
+  content: "";
+  position: absolute;
+  height: 1.5px;
+  width: 480px;
+  left: 0px;
+  top: 30px;
+  background-color: black;
+}
+.navigation-item {
+  color: white;
+  padding: 6px 15px;
+  &.active {
+    border-bottom: 3px solid orange;
+  }
+  &:active,
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }

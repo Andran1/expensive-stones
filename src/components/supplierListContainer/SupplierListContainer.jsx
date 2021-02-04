@@ -6,6 +6,8 @@ import Icon from "../icon/Icon";
 import "./supplierListContainer.scss";
 import { connect } from "react-redux";
 import {toggleModalSupplier} from '../../redux/supplierList/supplierList.action'
+import { Route } from "react-router-dom";
+
 
 class SupplierListContainer extends Component {
 
@@ -16,7 +18,8 @@ class SupplierListContainer extends Component {
         <span>Поставщики</span>
         <div className="Supplier-List-Container">
           <Icon icon={faPlus} onClick={this.props.toggleModalSupplier} />
-          <SupplierList />
+          {/* <SupplierList /> */}
+          <Route path='/:type' component={SupplierList}/>
           {this.props.showModalSupplier && (
             <ShowModalSupplier onClose={this.props.toggleModalSupplier} />
           )}

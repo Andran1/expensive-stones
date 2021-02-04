@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/" component={Group} exact />
+        <Route path="/" component={Group}  />
         <Route path="/color" component={ColorPage}  />
       </Switch>
     </div>

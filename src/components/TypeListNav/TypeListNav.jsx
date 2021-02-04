@@ -2,6 +2,7 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import "./TypeListNav.scss";
 import { setItmeType } from "../../redux/supplierList/supplierList.action";
+import { NavLink } from "react-router-dom";
 
 class TypeListNav extends Component {
   state = {
@@ -26,8 +27,12 @@ class TypeListNav extends Component {
           <ul>
             {listType.map((item) => {
               return (
-                <li key={item.type} onClick={() => this.handleType(item.type)}>
-                  {item.name}
+                <li key={item.type}>
+                  <NavLink
+                  className='navigation-item'
+                   to={`/${item.type}`}
+                   activeClassName='active'
+                   > {item.name}</NavLink>
                 </li>
               );
             })}
