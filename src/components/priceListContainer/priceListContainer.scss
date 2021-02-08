@@ -1,9 +1,7 @@
 .Price-List-Container {
   margin-top: 20px;
-
-  .Price-List-Container-Item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+  height: 300px;
+  display: flex;
+  align-items: center;
+  
 }

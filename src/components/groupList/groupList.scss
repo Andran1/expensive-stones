@@ -1,0 +1,16 @@
+.group-list {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #444652;
+  height: 470px;
+  position: relative;
+  z-index: 1;
+
+  table,
+  th,
+  td {
+    color: white;
+    padding: 0;
+    text-align: center;
+  }
+}

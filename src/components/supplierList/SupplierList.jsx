@@ -5,7 +5,8 @@ import Icon from "../icon/Icon";
 
 const SupplierList = (props) => {
   const { supplierList, match } = props;
-  console.log(props);
+  console.log(supplierList);
+
 
   const listType = supplierList.filter((list) => {
     if (list.type === match.params.type) {
@@ -34,7 +35,6 @@ const SupplierList = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  supplierType: state.supplier.supplierType,
   supplierList: state.supplier.supplierList,
 });
 

@@ -1,0 +1,58 @@
+.tables-modal-container {
+  border: 1px solid white;
+  width: 750px;
+  border-radius: 5px;
+  flex-direction: column;
+  transform: translateX(-50%) scale(0.5);
+  animation: winAnimation 0.5s forwards ease;
+  z-index: 3;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  background-color: #353641;
+
+  .tables-modal-title {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgba(34, 31, 31, 0.541);
+    height: 30px;
+  }
+  .tables-modal-slider {
+    margin-left: 30px;
+  }
+
+  .table-modal-input {
+    width: 390px;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: white;
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    input {
+      background-color: #545662;
+      border-radius: 5px;
+    }
+  }
+
+  .tables-modal-foter {
+    margin-top: 30px;
+
+    border: 0;
+  }
+
+  @keyframes winAnimation {
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+  }
+}

@@ -7,11 +7,11 @@ import { NavLink } from "react-router-dom";
 class TypeListNav extends Component {
   state = {
     listType: [
-      { type: "Типы1", name: "Типы_1" },
-      { type: "Типы2", name: "Типы_2" },
-      { type: "Типы3", name: "Типы_3" },
-      { type: "Типы4", name: "Типы_4" },
-      { type: "Типы5", name: "Типы_5" },
+      { type: "Тип1", name: "Типы_1" },
+      { type: "Тип2", name: "Типы_2" },
+      { type: "Тип3", name: "Типы_3" },
+      { type: "Тип4", name: "Типы_4" },
+      { type: "Тип5", name: "Типы_5" },
     ],
   };
 
@@ -25,7 +25,7 @@ class TypeListNav extends Component {
       <div className="Type-List-Nav-Block">
         <nav>
           <ul>
-            {listType.map((item) => {
+            {listType.map((item) => { 
               return (
                 <li key={item.type}>
                   <NavLink

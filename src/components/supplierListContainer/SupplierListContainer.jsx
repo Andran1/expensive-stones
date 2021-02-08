@@ -18,7 +18,6 @@ class SupplierListContainer extends Component {
         <span>Поставщики</span>
         <div className="Supplier-List-Container">
           <Icon icon={faPlus} onClick={this.props.toggleModalSupplier} />
-          {/* <SupplierList /> */}
           <Route path='/:type' component={SupplierList}/>
           {this.props.showModalSupplier && (
             <ShowModalSupplier onClose={this.props.toggleModalSupplier} />

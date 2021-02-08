@@ -8,31 +8,24 @@ import { connect } from "react-redux";
 import {
   addItemSupplierList,
   toggleModalSupplier,
+  toggleIcon,
 } from "../../redux/supplierList/supplierList.action";
+import ImageModal from "../imageModal/ImageModal";
 
 class ShowModalSupplier extends Component {
   state = {
-    hid: "none",
-    show: "",
     inputTypeValue: "",
     inputNamesValue: "",
   };
 
-  toggleIcon = () => {
-    this.setState({
-      hid: "",
-      show: "none",
-    });
-  };
-
   addedSupplier = () => {
     const { inputTypeValue, inputNamesValue } = this.state;
-    const { addItemSupplierList, toggleModalSupplier } = this.props;
+    const { addItemSupplierList, toggleModalSupplier,imageUrl } = this.props;
     const newItem = {
       id: idGenerator(),
       name: inputNamesValue,
       type: inputTypeValue,
-      imgUrl: "",
+      imgUrl: imageUrl,
     };
     addItemSupplierList(newItem);
     this.setState({
@@ -41,7 +34,9 @@ class ShowModalSupplier extends Component {
     toggleModalSupplier();
   };
   render() {
-    const { hid, show, inputTypeValue, inputNamesValue } = this.state;
+    // console.log(this.props.imageUrl);
+    const { inputTypeValue, inputNamesValue } = this.state;
+    const { toggleIcon, hid, show, imageUrl,imgBlock } = this.props;
 
     return (
       <div className="Modal-window">
@@ -52,14 +47,21 @@ class ShowModalSupplier extends Component {
 
         <div className="Modal-Body">
           <div className="Download-Img">
+           <div  className="Download-Img"  style={{ display: `${imgBlock}` }}>
+           <img
+              src={imageUrl}
+              style={{ width: "95%", height: "95%" }}
+              alt=""
+            />
+           </div>
             <div style={{ display: `${show}` }}>
-              <Icon icon={faPlus} onClick={this.toggleIcon} />
+              <Icon icon={faPlus} onClick={toggleIcon} />
               <div style={{ color: "silver", fontSize: "19px" }}>Фото</div>
             </div>
-            <input style={{ display: `${hid}` }} type="file" />
+            <ImageModal hid={hid} />
           </div>
 
-          <div>
+          <div style={{marginTop:'10px'}}>
             <div className="Input-Title">Названия</div>
             <input
               onChange={(event) =>
@@ -75,7 +77,7 @@ class ShowModalSupplier extends Component {
               <Form.Group style={{ marginTop: "15px" }}>
                 <div style={{ color: "white" }}>Тип</div>
                 <Form.Control
-                  as="select"
+                  as="select" 
                   size="sm"
                   custom
                   className="Input-Select"
@@ -85,6 +87,7 @@ class ShowModalSupplier extends Component {
                   }
                   value={inputTypeValue}
                 >
+                  <option >Тип</option>
                   <option value="Тип1">Тип-1</option>
                   <option value="Тип2">Тип-2</option>
                   <option value="Тип3">Тип-3</option>
@@ -107,10 +110,16 @@ class ShowModalSupplier extends Component {
     );
   }
 }
-
+const mapStateToProps = (state) => ({
+  hid: state.supplier.hid,
+  show: state.supplier.show,
+  imageUrl: state.supplier.imageUrl,
+  imgBlock:state.supplier.imgBlock
+});
 const mapDispatchToProps = (dispatch) => ({
   addItemSupplierList: (item) => dispatch(addItemSupplierList(item)),
   toggleModalSupplier: () => dispatch(toggleModalSupplier()),
+  toggleIcon: () => dispatch(toggleIcon()),
 });
 
-export default connect(null, mapDispatchToProps)(ShowModalSupplier);
+export default connect(mapStateToProps, mapDispatchToProps)(ShowModalSupplier);

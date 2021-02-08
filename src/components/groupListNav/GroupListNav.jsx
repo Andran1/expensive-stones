@@ -2,16 +2,28 @@ import { NavLink } from "react-router-dom";
 import "./groupListNav.scss";
 
 const GroupListNav = () => {
+  const navList = [
+    { name: "Бриллиант", to: "/" },
+    { name: "Цветной", to: "/color" },
+  ];
   return (
     <div className="Group-List-Nav">
       <nav>
         <ul>
-          <NavLink to="/">
-            <li>Бриллиант</li>
-          </NavLink>
-          <NavLink  to="/color">
-            <li>Цветной</li>
-          </NavLink>
+          {navList.map((item, idx) => {
+            return (
+              <li key={idx}>
+                <NavLink
+                  className="nav-item"
+                  to={item.to}
+                  activeClassName="active"
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            );
+          })}
+
         </ul>
       </nav>
     </div>

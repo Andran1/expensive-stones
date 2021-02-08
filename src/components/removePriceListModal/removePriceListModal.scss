@@ -1,0 +1,28 @@
+.remove-modal-block{
+    width: 100px;
+    height: 33px;
+    background-color: #444652;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    left:50px;
+    top: 0%;
+    position: absolute;
+    z-index: 1;
+ 
+    transform: translateX(-50%) scale(0.5);
+    animation: winAnimation 0.5s forwards ease;
+
+    @keyframes winAnimation {
+        100% {
+          transform: translateX(-50%) scale(1);
+          opacity: 1;
+        }
+      }
+}

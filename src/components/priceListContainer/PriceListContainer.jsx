@@ -4,6 +4,8 @@ import Icon from "../icon/Icon";
 import PriceList from "../priceList/PriceList";
 import PriceListModal from "../priceListModal/PriceListModal";
 import { Component } from "react";
+import { connect } from "react-redux";
+import {clearPriceModalList} from '../../redux/priceList/priceList.action'
 
 class PriceListContainer extends Component {
   state = {
@@ -14,14 +16,16 @@ class PriceListContainer extends Component {
     this.setState({
       showModalPriceList: !this.state.showModalPriceList,
     });
+    this.props.clearPriceModalList()
+
   };
 
   render() {
     const { showModalPriceList } = this.state;
     return (
-      <div className="Price-List-Container">
+      <div >
         <span>Прайс Лист</span>
-        <div className="Price-List-Container-Item">
+        <div className="Price-List-Container">
           <Icon icon={faPlus} onClick={this.toggleModal} />
 
           <PriceList />
@@ -31,4 +35,9 @@ class PriceListContainer extends Component {
     );
   }
 }
-export default PriceListContainer;
+
+const mapDispatchToProps = (dispatch) => ({
+  clearPriceModalList: () => dispatch(clearPriceModalList()),
+});
+
+export default connect(null, mapDispatchToProps)(PriceListContainer);

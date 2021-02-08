@@ -1,0 +1,7 @@
+const actionType = {
+  ADD_ITEM_TABLE: "ADD_ITEM_TABLE",
+  SET_SLID_SHADE_VALUE:"SET_SLID_SHADE_VALUE",
+  SET_SLID_PURITY_VALUE:"SET_SLID_PURITY_VALUE"
+};
+
+export default actionType;
