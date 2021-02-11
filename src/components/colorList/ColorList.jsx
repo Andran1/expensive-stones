@@ -5,7 +5,6 @@ import "./colorList.scss";
 
 class ColorList extends Component {
   takesColorUrl = (data) => {
-    console.log(data);
     this.props.takeColorData(data);
   };
   render() {

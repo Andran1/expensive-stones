@@ -6,8 +6,10 @@ export const Th = ({ style, ...restProps }) => {
       style={{
         minWidth: "50px",
         border: "1px solid #333030",
+        color:"white",
+        fontSize:"12x",
+        fontWeight:'300',
         ...style,
-        // padding: "15px",
       }}
       {...restProps}
     >
@@ -22,8 +24,10 @@ export const Td = ({ style, ...restProps }) => {
       style={{
         minWidth: "50px",
         border: "1px solid #616666",
+        color:"white",
+        fontSize:"12x",
+        fontWeight:'300',
         ...style,
-        // padding: "15px",
       }}
       {...restProps}
     >

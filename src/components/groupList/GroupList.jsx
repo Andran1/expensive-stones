@@ -20,13 +20,12 @@ class GroupList extends Component {
     const selectedItem = priceList.find(
       (item) => item.id === selectedPriceLisItemId
     );
-    console.log(this.props.tableItems);
 
     return (
       <div className="group-list">
         <span>Группы</span>
         {selectedItem && (
-          <table>
+          <table style={{ marginTop: "20px", borderRadius: "5px" }}>
             <thead>
               <tr>
                 <Th colSpan={2}>
@@ -45,40 +44,48 @@ class GroupList extends Component {
                         height: "25px",
                       }}
                     />
-                    <span>{selectedItem.rate}</span>
+                    <span style={{ marginLeft: "10px" }}>
+                      {selectedItem.rate}
+                    </span>
                   </div>
                 </Th>
                 <Th colSpan="100%">Качества</Th>
               </tr>
               <tr style={{ backgroundColor: "#ffffff30" }}>
                 <Th style={{ borderRight: "none" }}>
-                  <img
-                    src={selectedItem.colorUrl}
-                    alt=""
-                    style={{
-                      width: "45px",
-                      height: "45px",
-                      borderRadius: "50px",
-                    }}
-                  />
-                  <div>{selectedItem.colorName}</div>
+                  <div>
+                    <img
+                      src={selectedItem.colorUrl}
+                      alt=""
+                      style={{
+                        width: "45px",
+                        height: "45px",
+                        borderRadius: "50px",
+                      }}
+                    />
+                  </div>
+                  <div style={{ fontSize: "10px", fontWeight: "300" }}>
+                    {selectedItem.colorName}
+                  </div>
                 </Th>
                 <Th
                   style={{
                     borderLeft: "none",
                   }}
                 >
-                  <img
-                    src={selectedItem.fasetingUrl}
-                    alt=""
-                    style={{
-                      width: "45px",
-                      height: "45px",
-                      borderRadius: "50px",
-                    }}
-                  />
                   <div>
-                  {selectedItem.fasetingName}
+                    <img
+                      src={selectedItem.fasetingUrl}
+                      alt=""
+                      style={{
+                        width: "45px",
+                        height: "45px",
+                        borderRadius: "50px",
+                      }}
+                    />
+                  </div>
+                  <div style={{ fontSize: "10px", fontWeight: "300" }}>
+                    {selectedItem.fasetingName}
                   </div>
                 </Th>
                 <Th colSpan={2}>

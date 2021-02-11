@@ -12,7 +12,7 @@ import { Route } from "react-router-dom";
 class SupplierListContainer extends Component {
 
   render() {
-
+ 
     return (
       <div>
         <span>Поставщики</span>

@@ -5,7 +5,7 @@ const GroupListNav = () => {
   const navList = [
     { name: "Бриллиант", to: "/" },
     { name: "Цветной", to: "/color" },
-  ];
+  ]; 
   return (
     <div className="Group-List-Nav">
       <nav>

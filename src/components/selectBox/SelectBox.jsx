@@ -10,13 +10,7 @@ const options = [
 ];
 
 class SelectBox extends Component {
-  // selecttedChangingValue = (event) => {
-  //   this.props.changeState({ selectedValue: event.target.value });
-  //   // this.props.handleValue(this.state.selectedValue);
-  // };
-
   render() {
-    console.log(this.props);
     return (
       <div>
         <div className="title">Валюта</div>

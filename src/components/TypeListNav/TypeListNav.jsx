@@ -16,7 +16,7 @@ class TypeListNav extends Component {
   };
 
   handleType = (type) => {
-    this.props.setItmeType(type);
+    this.props.setItmeType(type); 
   };
 
   render() {

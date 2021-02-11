@@ -24,7 +24,6 @@ class PriceListModal extends Component {
       fasetingImageUrl,
       fasetingName,
       colorName,
-      // rateValue,
       addPricList,
       onClose,
     } = this.props;
@@ -51,7 +50,6 @@ class PriceListModal extends Component {
   };
 
   handleValue = (data) => {
-    console.log(data);
     this.setState({ selectedValue: data });
   };
 
